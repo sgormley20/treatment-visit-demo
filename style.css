@@ -1,0 +1,409 @@
+/* -----------------------------
+   Page Layout
+----------------------------- */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Keep content high but safely on screen */
+.jspsych-display-element {
+  min-height: 100vh;
+}
+
+.jspsych-content-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: clamp(1.5rem, 4vh, 3rem);
+  padding-left: clamp(2rem, 5vw, 5rem);
+  padding-right: clamp(2rem, 5vw, 5rem);
+  box-sizing: border-box;
+}
+
+.jspsych-content {
+  width: min(100%, 1050px);
+  margin: 0 auto;
+}
+
+/* -----------------------------
+   Instructions
+----------------------------- */
+.question-instructions {
+  width: min(100%, 1050px);
+  margin: 0 auto clamp(2rem, 4vh, 3rem) auto;
+  text-align: left;
+}
+
+.questionnaire-title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.main-instruction {
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+.scale-explanation {
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.scale-explanation p {
+  margin: 0.5rem 0;
+}
+
+/* -----------------------------
+   Shared question prompt
+----------------------------- */
+
+.question-prompt {
+  display: block;
+  font-weight: 500;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* Short prompts can be huge */
+.baes-question-text {
+  font-size: clamp(3.5rem, 6vw, 5rem);
+}
+
+/* Longer Likert prompts need less size */
+.cadss-question-text {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.25;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.psi-question-text {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.25;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Slider prompts match the general large questionnaire prompt style */
+.slider-question-text {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.25;
+  max-width: 1050px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+/* -----------------------------
+   Likert question area
+----------------------------- */
+.jspsych-survey-likert-statement {
+  text-align: center !important;
+  max-width: 1100px !important;
+  margin: clamp(3rem, 6vh, 5rem) auto clamp(2.5rem, 5vh, 4rem) auto !important;
+  line-height: 1.15 !important;
+}
+
+/* Default Likert question style */
+.likert-question-text {
+  display: block;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+/* BAES has short words, so it can be very large */
+.baes-question-text {
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+/* CADSS questions are long, so reduce them */
+.cadss-question-text {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1.25;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* PSI questions are medium length */
+.psi-question-text {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.25;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+
+/* Force the Likert scale to stay on one row */
+.jspsych-survey-likert-opts {
+  width: min(100%, 1100px) !important;
+  max-width: 1100px !important;
+  margin: 1rem auto 0 auto !important;
+  padding: 0 0 2.5rem 0 !important;
+
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+
+/* Make every response option take equal horizontal space */
+.jspsych-survey-likert-opts li {
+  display: inline-block !important;
+  vertical-align: top !important;
+  box-sizing: border-box !important;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center !important;
+}
+
+/* Bigger radio buttons */
+.jspsych-survey-likert-opts input[type="radio"] {
+  transform: scale(1.6) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Make Likert option labels easier to read */
+.jspsych-survey-likert-opts label{
+  font-size: clamp(0.95rem, 1.1vw, 1.25rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  white-space: normal !important;
+}
+
+/* Hide Next button on Likert screens only */
+#jspsych-survey-likert-form .jspsych-btn,
+#jspsych-survey-likert-next {
+  display: none !important;
+}
+
+/* -----------------------------
+   Slider question area
+----------------------------- */
+.slider-question {
+  text-align: center !important;
+  max-width: 1100px !important;
+  margin: clamp(1.5rem, 3vh, 2.5rem) auto clamp(1rem, 2vh, 1.75rem) auto !important;
+  line-height: 1.25 !important;
+}
+
+/* Make the slider itself wider and easier to use */
+.jspsych-slider {
+  width: min(100%, 1000px);
+  height: 3rem;
+  margin-top: 2rem;
+}
+
+/* Bigger slider track */
+.jspsych-slider::-webkit-slider-runnable-track {
+  height: 1rem;
+}
+
+.jspsych-slider::-moz-range-track {
+  height: 1rem;
+}
+
+/* Bigger slider thumb */
+.jspsych-slider::-webkit-slider-thumb {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-top: -0.6rem;
+}
+
+.jspsych-slider::-moz-range-thumb {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+/* Hide the slider thumb at the start */
+.hide-slider-thumb-until-click .jspsych-slider::-webkit-slider-thumb {
+  opacity: 0;
+}
+
+.hide-slider-thumb-until-click .jspsych-slider::-moz-range-thumb {
+  opacity: 0;
+}
+
+/* Show the slider thumb once the participant clicks, focuses, or moves the slider */
+.hide-slider-thumb-until-click .jspsych-slider:active::-webkit-slider-thumb,
+.hide-slider-thumb-until-click .jspsych-slider:focus::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+.hide-slider-thumb-until-click .jspsych-slider:active::-moz-range-thumb,
+.hide-slider-thumb-until-click .jspsych-slider:focus::-moz-range-thumb {
+  opacity: 1;
+}
+
+/* Keep the slider normal size */
+.jspsych-slider {
+  width: min(100%, 1000px) !important;
+  height: 3rem;
+  margin-top: 2rem;
+}
+
+/* Move custom endpoint labels from above the slider to below it */
+.custom-slider-endpoints {
+  width: min(100%, 1000px);
+  margin: 0 auto 0.25rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+
+.custom-slider-endpoints span {
+  font-size: clamp(0.95rem, 1.1vw, 1.25rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  white-space: normal !important;
+  text-align: center !important;
+}
+
+.custom-slider-endpoints span:first-child {
+  text-align: left !important;
+}
+
+.custom-slider-endpoints span:last-child {
+  text-align: right !important;
+}
+
+/* Make the slider page order controllable */
+#jspsych-html-slider-response-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+/* Let the contents of the stimulus be ordered alongside the slider */
+#jspsych-html-slider-response-stimulus {
+  display: contents !important;
+}
+
+/* Keep instructions first */
+.question-instructions {
+  order: 1;
+}
+
+/* Question text second */
+.slider-question {
+  order: 2;
+}
+
+/* Slider third */
+.jspsych-html-slider-response-container {
+  order: 3;
+  width: min(100%, 1000px) !important;
+  margin: 0 auto !important;
+}
+
+/* Custom endpoint labels fourth */
+.custom-slider-endpoints {
+  order: 4;
+  width: min(100%, 1000px) !important;
+  margin: 0.25rem auto 1.5rem auto !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+}
+
+/* Next button fifth */
+#jspsych-html-slider-response-next {
+  order: 5;
+  align-self: center;
+}
+
+/* Make sure the slider keeps full size */
+.jspsych-slider {
+  width: 100% !important;
+  height: 3rem;
+  margin-top: 2rem;
+}
+
+/* Endpoint text style */
+.custom-slider-endpoints span {
+  font-size: clamp(0.95rem, 1.1vw, 1.25rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  white-space: normal !important;
+  text-align: center !important;
+}
+
+.custom-slider-endpoints span:first-child {
+  text-align: left !important;
+}
+
+.custom-slider-endpoints span:last-child {
+  text-align: right !important;
+}
+.slider-extremely {
+  display: inline-block;
+  transform: translateX(0.2rem);
+}
+
+/* -----------------------------
+   Welcome, intro, and end screens
+----------------------------- */
+
+.screen {
+  width: min(100%, 900px);
+  min-height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+.screen h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.screen p {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.35;
+  margin: 0.6rem 0;
+  font-weight: 400;
+}
+
+/* -----------------------------
+   Big transition Continue button
+----------------------------- */
+
+#jspsych-html-button-response-btngroup {
+  margin-top: 1.5rem !important;
+  text-align: center !important;
+}
+
+/* Catch every likely version of the Continue button */
+#jspsych-html-button-response-button-0,
+#jspsych-html-button-response-button-0 .jspsych-btn,
+#jspsych-html-button-response-btngroup button,
+#jspsych-html-button-response-btngroup .jspsych-btn,
+.big-continue-btn {
+  font-size: clamp(2.8rem, 6vw, 4.5rem) !important;
+  font-weight: 700 !important;
+
+  padding: 1.75rem 5.5rem !important;
+  min-width: 460px !important;
+  min-height: 130px !important;
+
+  border-radius: 1.25rem !important;
+  cursor: pointer !important;
+}

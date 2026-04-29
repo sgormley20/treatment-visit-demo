@@ -352,6 +352,58 @@ body {
 }
 
 /* -----------------------------
+   Compact slider screen layout
+----------------------------- */
+
+.slider-screen .jspsych-content-wrapper {
+  padding-top: clamp(0.25rem, 1vh, 1rem) !important;
+}
+
+.slider-screen .question-instructions {
+  margin-bottom: clamp(0.75rem, 1.5vh, 1.25rem) !important;
+}
+
+.slider-screen .questionnaire-title {
+  font-size: clamp(1.7rem, 2.5vw, 2.4rem) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.slider-screen .main-instruction {
+  font-size: clamp(1rem, 1.4vw, 1.25rem) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.slider-screen .scale-explanation {
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem) !important;
+  line-height: 1.25 !important;
+}
+
+.slider-screen .scale-explanation p {
+  margin: 0.25rem 0 !important;
+}
+
+.slider-screen .slider-question {
+  margin: clamp(0.75rem, 1.5vh, 1.25rem) auto clamp(0.5rem, 1vh, 1rem) auto !important;
+}
+
+.slider-screen .slider-question-text {
+  font-size: clamp(1.8rem, 3vw, 2.6rem) !important;
+  line-height: 1.2 !important;
+}
+
+.slider-screen .jspsych-slider {
+  margin-top: 0.75rem !important;
+}
+
+.slider-screen .custom-slider-endpoints {
+  margin-bottom: 0.75rem !important;
+}
+
+.slider-screen #jspsych-html-slider-response-next {
+  margin-top: 0.5rem !important;
+}
+
+/* -----------------------------
    Welcome, intro, and end screens
 ----------------------------- */
 

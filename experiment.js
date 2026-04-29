@@ -80,7 +80,7 @@ function addSliderQuestionnaire(questionnaire) {
     labels: [],
       require_movement: true,
       button_label: "Confirm",
-      css_classes: ["hide-slider-thumb-until-click"],
+      css_classes: ["hide-slider-thumb-until-click","slider-screen"],
       data: {
         questionnaire: questionnaire.name,
         item: item.name,
